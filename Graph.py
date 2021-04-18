@@ -29,7 +29,6 @@ def ehCompleto(self):
   else:
     return False
 
-<<<<<<< HEAD
 def buscaLargura(G,busca):
   visitado = set()
   caminho = []
@@ -57,13 +56,12 @@ def buscaProfundidade(G, busca):
       pilha.append(vizinho)
   return " ".join(caminho)
 buscaProfundidade(G, 0)
-=======
+
 def buscaProfundidade(G, v, visitado):
     visitado[v] = True
     for u in arresta[v]:
         if not visitado[u]:
             buscaProfundidade(G, u, visitado)
->>>>>>> parent of c350e24 (Update)
 
 def ehConexo(self):
   for i in range(no):
@@ -83,7 +81,6 @@ def ehRegular(self):
   if resultado:
     return True
   else:        
-<<<<<<< HEAD
     return False
 
 def menorCaminho(self, distancia, passos):
@@ -106,6 +103,3 @@ def dijkstra(self, i):
         distancia[v] = distancia[u] + self.G[u][v]
   self.printSolution(distancia)
 dijkstra(0,1)
-=======
-    return False
->>>>>>> parent of c350e24 (Update)
