@@ -15,7 +15,7 @@ G.add_edge(3,4)
 G.add_edge(4,0)
 G.add_edge(1,4)
 
-aresta = G.number_of_edges()
+arresta = G.number_of_edges()
 
 max = sys.maxsize
 
@@ -24,11 +24,12 @@ nx.draw_networkx(G, pos=nx.spring_layout(G), with_labels=True)
 plt.show()
 
 def ehCompleto(self):
-  if (aresta == no*(no-1)/2):
+  if (arresta == no*(no-1)/2):
     return True
   else:
     return False
 
+<<<<<<< HEAD
 def buscaLargura(G,busca):
   visitado = set()
   caminho = []
@@ -56,6 +57,13 @@ def buscaProfundidade(G, busca):
       pilha.append(vizinho)
   return " ".join(caminho)
 buscaProfundidade(G, 0)
+=======
+def buscaProfundidade(G, v, visitado):
+    visitado[v] = True
+    for u in arresta[v]:
+        if not visitado[u]:
+            buscaProfundidade(G, u, visitado)
+>>>>>>> parent of c350e24 (Update)
 
 def ehConexo(self):
   for i in range(no):
@@ -75,6 +83,7 @@ def ehRegular(self):
   if resultado:
     return True
   else:        
+<<<<<<< HEAD
     return False
 
 def menorCaminho(self, distancia, passos):
@@ -85,7 +94,6 @@ def menorCaminho(self, distancia, passos):
                 minimo_indice = v
         return minimo_indice
 
-from sys import argv
 def dijkstra(self, i):
   distancia = [sys.maxsize] * self.vertice
   distancia[i] = 0
@@ -98,3 +106,6 @@ def dijkstra(self, i):
         distancia[v] = distancia[u] + self.G[u][v]
   self.printSolution(distancia)
 dijkstra(0,1)
+=======
+    return False
+>>>>>>> parent of c350e24 (Update)
